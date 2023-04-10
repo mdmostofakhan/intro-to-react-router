@@ -1,8 +1,8 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Posts = ({post}) => {
-//   const posts = useLoaderData()
+
 //   console.log(post);
   const {title,body,id} = post;
 
@@ -11,7 +11,8 @@ const Posts = ({post}) => {
         <div>
             <h5>Id:{id}</h5>
             <h3>Body:{body}</h3>
-            <p>Title:{title}</p>
+           <Link to={`/post/${id}`}>Show Details</Link>
+           <button>Show Post Details</button>
         </div>
     );
 };
